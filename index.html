@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florr.io Crafting Calculator</title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="background-container">
+        <h1 id="main-title">Florr.io Crafting Calculator/Simulator</h1>
+        <p class="line"></p>
+        <div class="mother-rarity-container">
+            <h3 class="heading">1. Please select the rarity of the petals that you are crafting: </h3>
+
+            <div id="buttons">
+                <button id="common-button" class="rarity-button" data-index="0">Common</button>
+                <button id="unusual-button" class="rarity-button" data-index="1">Unusual</button>
+                <button id="rare-button" class="rarity-button" data-index="2">Rare</button>
+                <button id="epic-button" class="rarity-button" data-index="3">Epic</button>
+                <button id="legendary-button" class="rarity-button" data-index="4">Legendary</button>
+                <button id="mythic-button" class="rarity-button" data-index="5">Mythic</button>
+                <button id="ultra-button" class="rarity-button" data-index="6">Ultra</button>
+            </div>
+
+            <div class="rarity-craft-container">
+                <div class="rarity-container">
+                    <p id="current-rarity">Current Rarity:</p>
+                    <p id="user-rarity"><i>please select a rarity...</i></p>
+                </div>
+            </div>
+        </div>
+        <p class="line"></p>
+        <div class="enter-petals">
+            <h3 class="heading">2. Please enter the number of petals you are crafting:</h3>
+            <input type="number" id="petals-input" placeholder="Enter number of petals to craft...">
+        </div>
+        <p class="line"></p>
+        <div class="craft-heading-container">
+            <h3 class="heading">3. Craft!</h3>
+            <button id="craft-button" onclick="getPetalsReward()">Craft</button>
+        </div>
+
+        <p class="line"></p>
+
+        <h3 class="heading">4. Results:</h3>
+        <div class="onaverage-result">
+            <h2>On average, crafting</h2>
+            <h2 id="total-petals-display">[petals]</h2>
+            <h2 id="user-rarity2">[rarity]</h2>
+            <h2>will get you </h2>
+            <h2 id="result-number-el">[result-petals]</h2>
+            <h2 id="user-rarity-add-1">[rarity+1]</h2>
+        </div>
+
+        <div class="at-least-one">
+            <h3>The probability of getting at least ONE</h3>
+            <h3 id="user-rarity-add-1-at-least-one">[rarity+1]</h3>
+            <h3>is</h3>
+            <h3 id="probability">[probability]%</h3>
+            <h2>-- VERY INACCURATE - IGNORE!</h2>
+        </div>
+
+        <div class="simulation-result">
+            <h2>If that was a real craft, you would've gotten</h2>
+            <h2 id="simulation-result-el">[simulated-petals]</h2>
+            <h2 id="user-rarity-add-1-simulated">[rarity+1]</h2>
+            <h2>(click craft to re-roll)</h2>
+        </div>
+        <p id="error-el"></p>
+    </div>
+
+    <footer class="footer">
+        Values for the averages are taken from <a href="https://official-florrio.fandom.com/wiki/Crafting" target="_blank">The Official Florr.io Wiki</a>. Made by @wwssskskskkskjsjsjsdjdj on Discord.
+    </footer>
+</body>
+</html>
